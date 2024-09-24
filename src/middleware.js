@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import jwt from 'jsonwebtoken'
+import { jwtVerify } from 'jose'
 
 export function middleware(req) {
 	const token = req.cookies.get('authToken')
@@ -7,14 +7,13 @@ export function middleware(req) {
 	if (!token) {
 		return NextResponse.redirect(new URL('/', req.url))
 	}
-
 	try {
-		jwt.verify(token, process.env.NEXT_PUBLIC_JWT_SECRET)
-	} catch (err) {
+		jwtVerify(token.value, process.env.JWT_SECRET)
+
+		return NextResponse.next()
+	} catch (error) {
 		return NextResponse.redirect(new URL('/', req.url))
 	}
-
-	return NextResponse.next()
 }
 
 export const config = {

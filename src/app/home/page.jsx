@@ -3,6 +3,7 @@ import styles from './home.module.css'
 import Footer from '@/components/Footer'
 import Image from 'next/image'
 import userIcon from '../../assets/user-icon.png'
+import HomeContent from '@/components/Main/HomeContent'
 
 export default function Home() {
 	return (
@@ -17,7 +18,7 @@ export default function Home() {
 			</header>
 
 			<main>
-				<h1>Home page</h1>
+				<HomeContent />
 			</main>
 
 			<Footer />
