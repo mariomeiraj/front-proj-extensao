@@ -7,17 +7,13 @@ export function middleware(req) {
 	if (!token) {
 		return NextResponse.redirect(new URL('/', req.url))
 	}
-
 	try {
-		const secret = process.env.VERCEL_JWT_SECRET
-		console.log(secret)
-		console.log(jwt.verify(token, secret))
-		jwt.verify(token, secret)
-	} catch (err) {
+		jwtVerify(token.value, process.env.JWT_SECRET)
+
+		return NextResponse.next()
+	} catch (error) {
 		return NextResponse.redirect(new URL('/', req.url))
 	}
-
-	return NextResponse.next()
 }
 
 export const config = {
