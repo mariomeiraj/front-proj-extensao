@@ -9,7 +9,7 @@ export function middleware(req) {
 	}
 
 	try {
-		jwt.verify(token, process.env.JWT_SECRET)
+		jwt.verify(token, process.env.NEXT_PUBLIC_JWT_SECRET)
 	} catch (err) {
 		return NextResponse.redirect(new URL('/', req.url))
 	}
