@@ -1,0 +1,32 @@
+.home {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+	width: 100%;
+	padding: 32px;
+}
+
+.home header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
+.home header img {
+	width: 32px;
+	height: auto;
+
+	&:hover {
+		transform: scale(1.1);
+		transition: 0.5s;
+		cursor: pointer;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	.home header img {
+		filter: invert(100%);
+	}
+}

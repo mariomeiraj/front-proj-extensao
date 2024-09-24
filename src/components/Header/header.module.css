@@ -1,0 +1,42 @@
+@font-face {
+	font-family: Recoleta;
+	src: url(../../assets/fonts/Recoleta.otf);
+}
+
+.header {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.textLogo p {
+	font-family: Recoleta;
+	font-weight: 900;
+	line-height: 0.9;
+	font-size: 24px;
+
+	&:first-child {
+		font-weight: 100;
+	}
+}
+
+.btn {
+	padding: 10px 16px;
+	background-color: var(--background);
+	border-radius: 10px;
+	border: 1px solid var(--foreground);
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-weight: 600;
+	font-family: Raleway;
+
+	&:hover {
+		cursor: pointer;
+		background-color: var(--foreground);
+		color: var(--background);
+		transition: 0.5s;
+		border: 1px solid var(--background);
+	}
+}

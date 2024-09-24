@@ -1,0 +1,97 @@
+.main {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	font-family: Raleway;
+}
+
+.main h2 {
+	text-align: center;
+	font-family: Recoleta;
+	font-size: large;
+	font-weight: 900;
+	background-color: var(--foreground);
+	color: var(--background);
+}
+
+.main p {
+	font-size: medium;
+	font-weight: 300;
+	color: var(--second-text);
+}
+
+.sectionMid {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.sectionMid ul {
+	padding-left: 16px;
+}
+
+.sectionMid ul li {
+	font-weight: 900;
+	font-size: medium;
+	color: var(--second-text);
+}
+
+.image3d {
+	width: 160px;
+	height: auto;
+	animation: moveRocket 10s ease-in-out infinite;
+}
+
+@keyframes moveRocket {
+	0% {
+		transform: translate(0, 0) scale(1) skewY(0deg);
+	}
+	25% {
+		transform: translate(-10px, -30px) scale(1.1, 0.9) skewY(-5deg);
+	}
+	50% {
+		transform: translate(10px, -30px) scale(1, 1) skewY(0deg);
+	}
+	75% {
+		transform: translate(-5px, 0) scale(0.95, 1.05) skewY(5deg);
+	}
+	100% {
+		transform: translate(0, 0) scale(1) skewY(0deg);
+	}
+}
+
+.sectionFinal {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	gap: 8px;
+}
+
+.sectionFinal h1 {
+	font-family: Recoleta;
+}
+
+.sectionFinal p {
+	font-size: smaller;
+	width: 80%;
+}
+
+.btnRegister {
+	text-align: center;
+	padding: 10px 16px;
+	background-color: var(--background);
+	border-radius: 10px;
+	border: 1px solid var(--foreground);
+	font-weight: 600;
+	font-family: Raleway;
+
+	&:hover {
+		cursor: pointer;
+		background-color: var(--foreground);
+		color: var(--background);
+		transition: 0.5s;
+		border: 1px solid var(--background);
+	}
+}

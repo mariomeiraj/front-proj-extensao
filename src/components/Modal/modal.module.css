@@ -1,0 +1,184 @@
+.modal {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+}
+
+.modalWrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	padding: 24px 32px;
+	max-width: 500px;
+	width: 80%;
+	height: 90%;
+
+	background: rgba(164, 164, 164, 0.44);
+	border-radius: 16px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(7.4px);
+	-webkit-backdrop-filter: blur(7.4px);
+	border: 1px solid rgba(164, 164, 164, 0.31);
+}
+
+@media (prefers-color-scheme: dark) {
+	.modalWrapper {
+		background: rgba(34, 34, 34, 0.53);
+		border-radius: 16px;
+		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+		backdrop-filter: blur(7.8px);
+		-webkit-backdrop-filter: blur(7.8px);
+		border: 1px solid rgba(34, 34, 34, 0.39);
+	}
+}
+
+.divCloseBtn {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	width: 100%;
+}
+
+.callToLog {
+	width: 100%;
+	font-family: Recoleta;
+}
+
+.callToLog span {
+	font-family: Raleway;
+	font-size: small;
+	font-weight: 200;
+}
+
+.closeBtn {
+	cursor: pointer;
+	width: 24px;
+	height: auto;
+
+	&:hover {
+		transform: scale(1.1);
+		transition: 1s;
+	}
+}
+
+.logModal {
+	width: 100%;
+	height: 100%;
+}
+
+.content {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 16px;
+}
+
+@media (prefers-color-scheme: dark) {
+	.closeBtn {
+		filter: invert(100%);
+	}
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	gap: 16px;
+}
+
+.form label {
+	display: none;
+}
+
+.form input {
+	width: 100%;
+	background-color: white;
+	color: black;
+	padding: 12px;
+	font-family: raleway;
+	font-weight: 600;
+	border: none;
+
+	&:focus {
+		border: none;
+		outline: none;
+	}
+	&::placeholder {
+		font-weight: 600;
+	}
+
+	&:last-child {
+		cursor: pointer;
+		color: var(--foreground);
+		border: 1px solid var(--foreground);
+
+		background: rgba(76, 76, 76, 0.4);
+		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+		backdrop-filter: blur(5.7px);
+		-webkit-backdrop-filter: blur(5.7px);
+		font-weight: 600;
+	}
+
+	&:last-child:hover {
+		color: var(--foreground);
+
+		background: rgba(32, 32, 32, 0.67);
+		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+		backdrop-filter: blur(10px);
+		-webkit-backdrop-filter: blur(10px);
+		border: 1px solid rgba(32, 32, 32, 0.41);
+		font-weight: 600;
+
+		transition: 1s;
+		color: rgb(147, 147, 147);
+	}
+}
+
+.changeModalBtn {
+	font-family: raleway;
+	font-weight: 200;
+	border: none;
+	padding: 12px;
+	width: 100%;
+	cursor: pointer;
+	color: var(--foreground);
+	border: 1px solid var(--foreground);
+	background: rgba(76, 76, 76, 0.4);
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(5.7px);
+	-webkit-backdrop-filter: blur(5.7px);
+	font-weight: 600;
+
+	&:hover {
+		color: var(--foreground);
+
+		background: rgba(32, 32, 32, 0.67);
+		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+		backdrop-filter: blur(10px);
+		-webkit-backdrop-filter: blur(10px);
+		border: 1px solid rgba(32, 32, 32, 0.41);
+		font-weight: 600;
+
+		transition: 1s;
+		color: rgb(147, 147, 147);
+	}
+
+	&:focus {
+		border: none;
+		outline: none;
+	}
+}
+
+.textChangeBtn {
+	font-family: Raleway;
+	font-size: small;
+}
