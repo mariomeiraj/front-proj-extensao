@@ -11,6 +11,7 @@ export function middleware(req) {
 	try {
 		const secret = process.env.VERCEL_JWT_SECRET
 		console.log(secret)
+		console.log(jwt.verify(token, secret))
 		jwt.verify(token, secret)
 	} catch (err) {
 		return NextResponse.redirect(new URL('/', req.url))
