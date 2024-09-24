@@ -9,7 +9,9 @@ export function middleware(req) {
 	}
 
 	try {
-		jwt.verify(token, process.env.NEXT_PUBLIC_JWT_SECRET)
+		const secret = process.env.VERCEL_JWT_SECRET
+		console.log(secret)
+		jwt.verify(token, secret)
 	} catch (err) {
 		return NextResponse.redirect(new URL('/', req.url))
 	}
